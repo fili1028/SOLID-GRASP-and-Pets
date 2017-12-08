@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Application;
 
 
-namespace UserInterface
+namespace ConsoleApp13.UserInterface
 {
     class Menu
     {
@@ -14,13 +14,9 @@ namespace UserInterface
         {
             Controller c = new Controller();
             bool runningBool = true;
-            //DatabaseSearchCommands d = new DatabaseSearchCommands();
-            //Pet P = new Pet();
-            //PetOwner O = new PetOwner();
-
-
             while (runningBool)
             {
+                Console.Clear();
                 Console.WriteLine("Press 1 to enter pet into database");
                 Console.WriteLine("Press 2 to Show all pets");
                 Console.WriteLine("Press 3 to insert an Owner");
@@ -32,37 +28,22 @@ namespace UserInterface
                 switch (MenuString)
                 {
                     case "1":
-                       
+                        c.InsertPet();
                         break;
                     case "2":
-                        d.ShowPets();
+                        c.ShowPets();
                         break;
                     case "3":
-                        Console.WriteLine("Insert Owner Last Name");
-                        O.OwnerLastName = Console.ReadLine();
-                        Console.WriteLine("Insert Owner First Name");
-                        O.OwnerFirstName = Console.ReadLine();
-                        Console.WriteLine("Insert Owner Phone");
-                        O.OwnerPhone = Console.ReadLine();
-                        Console.WriteLine("Insert Owner Email");
-                        O.OwnerEmail = Console.ReadLine();
-                        d.InsertOwner(O);
+                        c.ShowPets();
                         break;
                     case "4":
-                        Console.WriteLine("Insert owner Last Name");
-                        O.OwnerLastName = Console.ReadLine();
-                        d.SearchByOwnerLastName(O);
+                        c.SearchByOwnerLastName();
                         break;
                     case "5":
-                        Console.WriteLine("Insert owner Email");
-                        O.OwnerEmail = Console.ReadLine();
-                        d.SearchOwnerByEmail(O);
-
-                        break;
+                        c.SearchByOwnerEmail();
+                            break;
                     case "6":
-                        Console.WriteLine("Insert owner ID");
-                        O.OwnerID = int.Parse(Console.ReadLine());
-                        d.SearchOwnerPetInfoByOwnerID(O);
+                        c.SearchOwnerPetInfoByOwnerID();
                         break;
 
                 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConnectToDataBase
+namespace Domain
 {
     public class PetOwner
     {

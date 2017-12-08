@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace ConnectToDataBase
+namespace ConsoleApp13.Domain
 {
     public class DatabaseSearchCommands
     {
@@ -91,7 +91,8 @@ namespace ConnectToDataBase
                             string PetWeight = reader["PetWeight"].ToString();
                             string OwnerID = reader["OwnerID"].ToString();
                             Console.WriteLine(PetID + " " + PetName + " " + PetType + " " + PetBreed + " " + PetDOB + " " + PetWeight + " " + OwnerID);
-                        }
+                            }
+                        reader.Close();
                     }
                 }
 
