@@ -10,6 +10,7 @@ namespace ConsoleApp13.Domain
 {
     public class DatabaseSearchCommands
     {
+        
 
         private static string connectionString =
             "Server=EALSQL1.eal.local; Database= DB2017_C08; User Id=USER_C08; Password=SesamLukOp_08";

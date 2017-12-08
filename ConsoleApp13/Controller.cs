@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Domain;
-
-namespace Application
+using ConsoleApp13.Domain;
+namespace ConsoleApp13.Application
 {
     class Controller
     {

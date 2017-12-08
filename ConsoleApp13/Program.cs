@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ConsoleApp13.UserInterface;
 
-namespace program
+namespace ConsoleApp13.program
 {
     class Program
     {
